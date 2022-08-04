@@ -27,19 +27,15 @@ def global_hora():
 
   # Convertendo as variaveis para [int]
   time_1 = datetime.strptime(T_Doc, "%H:%M:%S")
-  time_2 = datetime.strptime(T_hora, "%H:%M:%S")
-  print(f"Dados do arquivo {time_1}")
-  print(f"Dados do sistema {time_2}")
-  
+  time_2 = datetime.strptime(T_hora, "%H:%M:%S")  
   time_interval = time_2 - time_1
   time_interval = str(time_interval)
-
   time_interval2 = (time_interval[:1])
   
   if time_interval2 == "-":
     process = subprocess.Popen("./ping.sh",stdout=PIPE, stderr=PIPE)
   else:
-    if time_interval > "0:59:00": # Teste correto e [ < ]
+    if time_interval > "0:00:01": # Teste correto e [ < ]
       print("                         ---------------------------------------------------------")
       print("                                      === Verificador de Token_temp ===")
       print(f"                                         Hora do arquivo: {T_Doc}")
