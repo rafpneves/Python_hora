@@ -131,6 +131,7 @@ then
     git remote add origin "$origin"
     git push -u origin main
     echo ""
+    /titulo
 elif [ $res = "n" ];
 then
     echo ""
