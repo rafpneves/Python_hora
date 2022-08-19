@@ -67,7 +67,7 @@ def Hora():
   if time_interval2 == "-":
     process = subprocess.Popen("./ping.sh",stdout=PIPE, stderr=PIPE)
   else:
-    if time_interval > "0:00:01": # Teste correto e [ < ]
+    if time_interval > "0:00:20": # Teste correto e [ < ]
       print("                         ---------------------------------------------------------")
       print("                                        === Verificador de Hora ===")
       print(f"                                         Hora do arquivo: {T_Doc}")
